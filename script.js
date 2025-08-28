@@ -79,3 +79,48 @@ function calculateBMI() {
 
   out.textContent = `BMI: ${bmi.toFixed(2)} (${cat})`;
 }
+
+// Next Number Finder
+function findNextNumber() {
+  let num = document.getElementById("numberInput").value;
+  let parsed = parseFloat(num);
+
+  if (isNaN(parsed)) {
+    document.getElementById("nextNumberResult").innerText = "Please enter a valid number.";
+  } else {
+    if (Number.isInteger(parsed)) {
+      document.getElementById("nextNumberResult").innerText = 
+        `Next number after ${parsed} is ${parsed + 1}`;
+    } else {
+      let nextFloat = (parsed + 0.1).toFixed(1);
+      document.getElementById("nextNumberResult").innerText = 
+        `Next number after ${parsed} is ${nextFloat}`;
+    }
+  }
+}
+// Array Finder
+function findNextInArray() {
+  let arrayStr = document.getElementById("arrayInput").value;
+  let target = parseFloat(document.getElementById("targetInput").value);
+
+  let arr = arrayStr.split(",").map(num => parseFloat(num.trim()));
+
+  if (isNaN(target)) {
+    document.getElementById("nextArrayResult").innerText = "Please enter a valid target number.";
+    return;
+  }
+
+  if (arr.includes(target)) {
+    let index = arr.indexOf(target);
+    if (index < arr.length - 1) {
+      document.getElementById("nextArrayResult").innerText =
+        `Next number after ${target} is ${arr[index + 1]}`;
+    } else {
+      document.getElementById("nextArrayResult").innerText =
+        `${target} is the last element, no next number.`;
+    }
+  } else {
+    document.getElementById("nextArrayResult").innerText =
+      `Number ${target} not found in the array.`;
+  }
+}

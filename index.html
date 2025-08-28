@@ -1,152 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quick Switch</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
 
-  <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Switch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <section id="home" class="container py-5">
-    <h1 class="display-6 text-center mb-4 main-heading">Quick Switch</h1>
-    <p class="text-center mb-5 para">Fast and Easy Conversion</p>
+    <section id="home" class="container py-5">
+        <h1 class="display-6 text-center mb-4 main-heading">Quick Switch</h1>
+        <p class="text-center mb-5 para">Fast and Easy Conversion</p>
 
-    <div class="row g-4 justify-content-center">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card card-click h-100" role="button" onclick="showConverter('conv-age')">
-          <div class="card-body text-center">
-            <div class="icon-emoji">📅</div>
-            <h5 class="card-title mt-3">Age → Days</h5>
-            <p class="card-text small text-muted">Convert years to days</p>
-          </div>
-        </div>
-      </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card card-click h-100" role="button" onclick="showConverter('conv-age')">
+                    <div class="card-body text-center">
+                        <div class="icon-emoji">📅</div>
+                        <h5 class="card-title mt-3">Age → Days</h5>
+                        <p class="card-text small text-muted">Convert years to days</p>
+                    </div>
+                </div>
+            </div>
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card card-click h-100" role="button" onclick="showConverter('conv-hours')">
-          <div class="card-body text-center">
-            <div class="icon-emoji">⏱️</div>
-            <h5 class="card-title mt-3">Hours → Seconds</h5>
-            <p class="card-text small text-muted">Quick time conversion</p>
-          </div>
-        </div>
-      </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card card-click h-100" role="button" onclick="showConverter('conv-hours')">
+                    <div class="card-body text-center">
+                        <div class="icon-emoji">⏱️</div>
+                        <h5 class="card-title mt-3">Hours → Seconds</h5>
+                        <p class="card-text small text-muted">Quick time conversion</p>
+                    </div>
+                </div>
+            </div>
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card card-click h-100" role="button" onclick="showConverter('conv-name')">
-          <div class="card-body text-center">
-            <div class="icon-emoji">📝</div>
-            <h5 class="card-title mt-3">Name Capitalizer</h5>
-            <p class="card-text small text-muted">Proper-case your name</p>
-          </div>
-        </div>
-      </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card card-click h-100" role="button" onclick="showConverter('conv-name')">
+                    <div class="card-body text-center">
+                        <div class="icon-emoji">📝</div>
+                        <h5 class="card-title mt-3">Name Capitalizer</h5>
+                        <p class="card-text small text-muted">Proper-case your name</p>
+                    </div>
+                </div>
+            </div>
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card card-click h-100" role="button" onclick="showConverter('conv-bmi')">
-          <div class="card-body text-center">
-            <div class="icon-emoji">⚖️</div>
-            <h5 class="card-title mt-3">BMI Calculator</h5>
-            <p class="card-text small text-muted">With feet → meters</p>
-          </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card card-click h-100" role="button" onclick="showConverter('conv-bmi')">
+                    <div class="card-body text-center">
+                        <div class="icon-emoji">⚖️</div>
+                        <h5 class="card-title mt-3">BMI Calculator</h5>
+                        <p class="card-text small text-muted">With feet → meters</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card card-click h-100" role="button" onclick="showConverter('nextNumber')">
+                    <div class="card-body text-center">
+                        <div class="icon-emoji">🔢</div>
+                        <h5 class="card-title mt-3">Next Number Finder</h5>
+                        <p class="card-text small text-muted">Find the next number in an array or single value</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+    <!-- Age → Days -->
+    <section id="conv-age"
+        class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-sm conv-card">
+            <div class="card-body">
+                <h2 class="h4 text-center mb-4">Age → Days Converter</h2>
+
+                <div class="mb-3">
+                    <label for="ageInput" class="form-label">Age (years)</label>
+                    <input type="number" id="ageInput" class="form-control" />
+                </div>
+
+                <button class="btn btn-primary w-100" onclick="convertAge()">Convert</button>
+                <div id="ageResult" class="result mt-3 text-center fw-semibold"></div>
+
+                <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours → Seconds -->
+    <section id="conv-hours"
+        class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-sm conv-card">
+            <div class="card-body">
+                <h2 class="h4 text-center mb-4">Hours → Seconds Converter</h2>
+
+                <div class="mb-3">
+                    <label for="hoursInput" class="form-label">Hours</label>
+                    <input type="number" id="hoursInput" class="form-control" />
+                </div>
+
+                <button class="btn btn-primary w-100" onclick="convertHours()">Convert</button>
+                <div id="hoursResult" class="result mt-3 text-center fw-semibold"></div>
+
+                <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Name Capitalizer -->
+    <section id="conv-name"
+        class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-sm conv-card">
+            <div class="card-body">
+                <h2 class="h4 text-center mb-4">Name Capitalizer</h2>
+
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Full name (lowercase)</label>
+                    <input type="text" id="nameInput" class="form-control" />
+                </div>
+
+                <button class="btn btn-primary w-100" onclick="capitalizeName()">Capitalize</button>
+                <div id="nameResult" class="result mt-3 text-center fw-semibold"></div>
+
+                <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI -->
+    <section id="conv-bmi"
+        class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-sm conv-card">
+            <div class="card-body">
+                <h2 class="h4 text-center mb-4">BMI Calculator</h2>
+
+                <div class="mb-3">
+                    <label for="weightInput" class="form-label">Weight (kg)</label>
+                    <input type="number" id="weightInput" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="heightInput">Height</label>
+                    <div class="input-group">
+                        <input type="number" id="heightInput" class="form-control" />
+                        <select id="heightUnit" class="form-select" style="max-width: 140px;">
+                            <option value="m" selected>Meters</option>
+                            <option value="ft">Feet</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary w-100" onclick="calculateBMI()">Calculate</button>
+                <div id="bmiResult" class="result mt-3 text-center fw-semibold"></div>
+
+                <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+            </div>
+        </div>
+    </section>
+
+<!-- Next Number Finder -->
+<section id="nextNumber"
+    class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
+    
+    <!-- Single Number -->
+    <div class="card shadow-sm conv-card me-3">
+        <div class="card-body">
+            <h3>🔢 Next Number Finder</h3>
+            <p>Enter a number (integer or float):</p>
+            <input type="text" id="singleNumberInput" class="form-control mb-2" placeholder="Enter a number">
+            <button class="btn btn-primary w-100" onclick="findNextNumber()">Find Next</button>
+            <div id="nextNumberResult" class="result mt-3 text-center fw-semibold"></div>
+            <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+        </div>
     </div>
-  </section>
 
-  <!-- Age → Days -->
-  <section id="conv-age" class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
+    <!-- Array-->
     <div class="card shadow-sm conv-card">
-      <div class="card-body">
-        <h2 class="h4 text-center mb-4">Age → Days Converter</h2>
-
-        <div class="mb-3">
-          <label for="ageInput" class="form-label">Age (years)</label>
-          <input type="number" id="ageInput" class="form-control"/>
+        <div class="card-body">
+            <h3>🔢 Next Number in Array Finder</h3>
+            <label>Enter numbers (comma separated):</label>
+            <input type="text" id="arrayInput" class="form-control mb-2" placeholder="e.g. 2, 5, 7, 10">
+            
+            <label>Enter a number to find its next:</label>
+            <input type="text" id="targetInput" class="form-control mb-2" placeholder="Enter a number">
+            
+            <button class="btn btn-primary w-100" onclick="findNextInArray()">Find Next</button>
+            <div id="nextArrayResult" class="result mt-3 text-center fw-semibold"></div>
+            <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
         </div>
-
-        <button class="btn btn-primary w-100" onclick="convertAge()">Convert</button>
-        <div id="ageResult" class="result mt-3 text-center fw-semibold"></div>
-
-        <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Hours → Seconds -->
-  <section id="conv-hours" class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
-    <div class="card shadow-sm conv-card">
-      <div class="card-body">
-        <h2 class="h4 text-center mb-4">Hours → Seconds Converter</h2>
 
-        <div class="mb-3">
-          <label for="hoursInput" class="form-label">Hours</label>
-          <input type="number" id="hoursInput" class="form-control"/>
-        </div>
 
-        <button class="btn btn-primary w-100" onclick="convertHours()">Convert</button>
-        <div id="hoursResult" class="result mt-3 text-center fw-semibold"></div>
-
-        <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Name Capitalizer -->
-  <section id="conv-name" class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
-    <div class="card shadow-sm conv-card">
-      <div class="card-body">
-        <h2 class="h4 text-center mb-4">Name Capitalizer</h2>
-
-        <div class="mb-3">
-          <label for="nameInput" class="form-label">Full name (lowercase)</label>
-          <input type="text" id="nameInput" class="form-control"/>
-        </div>
-
-        <button class="btn btn-primary w-100" onclick="capitalizeName()">Capitalize</button>
-        <div id="nameResult" class="result mt-3 text-center fw-semibold"></div>
-
-        <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- BMI -->
-  <section id="conv-bmi" class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
-    <div class="card shadow-sm conv-card">
-      <div class="card-body">
-        <h2 class="h4 text-center mb-4">BMI Calculator</h2>
-
-        <div class="mb-3">
-          <label for="weightInput" class="form-label">Weight (kg)</label>
-          <input type="number" id="weightInput" class="form-control"/>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label" for="heightInput">Height</label>
-          <div class="input-group">
-            <input type="number" id="heightInput" class="form-control"/>
-            <select id="heightUnit" class="form-select" style="max-width: 140px;">
-              <option value="m" selected>Meters</option>
-              <option value="ft">Feet</option>
-            </select>
-          </div>
-        </div>
-
-        <button class="btn btn-primary w-100" onclick="calculateBMI()">Calculate</button>
-        <div id="bmiResult" class="result mt-3 text-center fw-semibold"></div>
-
-        <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
-      </div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
