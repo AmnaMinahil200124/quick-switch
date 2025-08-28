@@ -158,38 +158,39 @@
         </div>
     </section>
 
-<!-- Next Number Finder -->
-<section id="nextNumber"
-    class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
-    
-    <!-- Single Number -->
-    <div class="card shadow-sm conv-card me-3">
-        <div class="card-body">
-            <h3>🔢 Next Number Finder</h3>
-            <p>Enter a number (integer or float):</p>
-            <input type="text" id="singleNumberInput" class="form-control mb-2" placeholder="Enter a number">
-            <button class="btn btn-primary w-100" onclick="findNextNumber()">Find Next</button>
-            <div id="nextNumberResult" class="result mt-3 text-center fw-semibold"></div>
-            <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
-        </div>
-    </div>
+    <!-- Next Number Finder -->
+    <section id="nextNumber"
+        class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
 
-    <!-- Array-->
-    <div class="card shadow-sm conv-card">
-        <div class="card-body">
-            <h3>🔢 Next Number in Array Finder</h3>
-            <label>Enter numbers (comma separated):</label>
-            <input type="text" id="arrayInput" class="form-control mb-2" placeholder="e.g. 2, 5, 7, 10">
-            
-            <label>Enter a number to find its next:</label>
-            <input type="text" id="targetInput" class="form-control mb-2" placeholder="Enter a number">
-            
-            <button class="btn btn-primary w-100" onclick="findNextInArray()">Find Next</button>
-            <div id="nextArrayResult" class="result mt-3 text-center fw-semibold"></div>
-            <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+        <!-- Single Number -->
+        <div class="card shadow-sm conv-card">
+            <div class="card-body">
+                <h3>🔢 Next Number Finder</h3>
+                <p>Enter a number (integer or float):</p>
+                <input type="text" id="numberInput" class="form-control mb-2" placeholder="Enter a number">
+                <button class="btn btn-primary w-100" onclick="findNextNumber()">Find Next</button>
+                <div id="nextNumberResult" class="result mt-3 text-center fw-semibold">
+                </div>
+                <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+            </div>
         </div>
-    </div>
-</section>
+
+        <!-- Array-->
+        <div class="card shadow-sm conv-card">
+            <div class="card-body">
+                <h3>🔢 Next Number in Array Finder</h3>
+                <label>Enter numbers (comma separated):</label>
+                <input type="text" id="arrayInput" class="form-control mb-2" placeholder="e.g. 2, 5, 7, 10">
+
+                <label>Enter a number to find its next:</label>
+                <input type="text" id="targetInput" class="form-control mb-2" placeholder="Enter a number">
+
+                <button class="btn btn-primary w-100" onclick="findNextInArray()">Find Next</button>
+                <div id="nextArrayResult" class="result mt-3 text-center fw-semibold"></div>
+                <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+            </div>
+        </div>
+    </section>
 
 
 
