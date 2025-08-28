@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Quick Switch</title>
+    <title>ConvertX</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
+<section class="main">
     <section id="home" class="container py-5">
-        <h1 class="display-6 text-center mb-4 main-heading">Quick Switch</h1>
+        <h1 class="main-heading text-center">CONVERT<STRONG>X</STRONG></h1>
         <p class="text-center mb-5 para">Fast and Easy Conversion</p>
 
         <div class="row g-4 justify-content-center">
@@ -22,7 +22,7 @@
                     <div class="card-body text-center">
                         <div class="icon-emoji">📅</div>
                         <h5 class="card-title mt-3">Age → Days</h5>
-                        <p class="card-text small text-muted">Convert years to days</p>
+                        <p class="card-text small">Convert years to days</p>
                     </div>
                 </div>
             </div>
@@ -30,9 +30,9 @@
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card card-click h-100" role="button" onclick="showConverter('conv-hours')">
                     <div class="card-body text-center">
-                        <div class="icon-emoji">⏱️</div>
+                        <div class="icon-emoji">⏰</div>
                         <h5 class="card-title mt-3">Hours → Seconds</h5>
-                        <p class="card-text small text-muted">Quick time conversion</p>
+                        <p class="card-text small">Quick time conversion</p>
                     </div>
                 </div>
             </div>
@@ -40,9 +40,9 @@
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card card-click h-100" role="button" onclick="showConverter('conv-name')">
                     <div class="card-body text-center">
-                        <div class="icon-emoji">📝</div>
+                        <div class="icon-emoji">🖋️</div>
                         <h5 class="card-title mt-3">Name Capitalizer</h5>
-                        <p class="card-text small text-muted">Proper-case your name</p>
+                        <p class="card-text small">Proper-case your name</p>
                     </div>
                 </div>
             </div>
@@ -50,18 +50,39 @@
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card card-click h-100" role="button" onclick="showConverter('conv-bmi')">
                     <div class="card-body text-center">
-                        <div class="icon-emoji">⚖️</div>
+                        <div class="icon-emoji">🧍</div>
                         <h5 class="card-title mt-3">BMI Calculator</h5>
-                        <p class="card-text small text-muted">With feet → meters</p>
+                        <p class="card-text small">With feet → meters</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card card-click h-100" role="button" onclick="showConverter('nextNumber')">
                     <div class="card-body text-center">
-                        <div class="icon-emoji">🔢</div>
+                        <div class="icon-emoji">➡️</div>
                         <h5 class="card-title mt-3">Next Number Finder</h5>
-                        <p class="card-text small text-muted">Find the next number in an array or single value</p>
+                        <p class="card-text small">Find the next number in an array or single value</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card card-click h-100" role="button" onclick="showConverter('firstLastArray')">
+                    <div class="card-body text-center">
+                        <div class="icon-emoji">🔗</div>
+                        <h5 class="card-title mt-3">First & Last Array</h5>
+                        <p class="card-text small">Generate a random array and pick the first and last
+                            elements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card card-click h-100" role="button" onclick="showConverter('additionTask')">
+                    <div class="card-body text-center">
+                        <div class="icon-emoji">➕</div>
+                        <h5 class="card-title mt-3">Add Two Numbers</h5>
+                        <p class="card-text small">Provide two integers and get their sum in the third box
+                            using event handling.</p>
                     </div>
                 </div>
             </div>
@@ -72,7 +93,7 @@
         class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
         <div class="card shadow-sm conv-card">
             <div class="card-body">
-                <h2 class="h4 text-center mb-4">Age → Days Converter</h2>
+                <h2 class="h4 text-center mb-4">📅Age → Days Converter</h2>
 
                 <div class="mb-3">
                     <label for="ageInput" class="form-label">Age (years)</label>
@@ -92,7 +113,7 @@
         class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
         <div class="card shadow-sm conv-card">
             <div class="card-body">
-                <h2 class="h4 text-center mb-4">Hours → Seconds Converter</h2>
+                <h2 class="h4 text-center mb-4">⏰Hours → Seconds Converter</h2>
 
                 <div class="mb-3">
                     <label for="hoursInput" class="form-label">Hours</label>
@@ -112,7 +133,7 @@
         class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
         <div class="card shadow-sm conv-card">
             <div class="card-body">
-                <h2 class="h4 text-center mb-4">Name Capitalizer</h2>
+                <h2 class="h4 text-center mb-4">🖋️Name Capitalizer</h2>
 
                 <div class="mb-3">
                     <label for="nameInput" class="form-label">Full name (lowercase)</label>
@@ -132,7 +153,7 @@
         class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
         <div class="card shadow-sm conv-card">
             <div class="card-body">
-                <h2 class="h4 text-center mb-4">BMI Calculator</h2>
+                <h2 class="h4 text-center mb-4">🧍BMI Calculator</h2>
 
                 <div class="mb-3">
                     <label for="weightInput" class="form-label">Weight (kg)</label>
@@ -160,25 +181,24 @@
 
     <!-- Next Number Finder -->
     <section id="nextNumber"
-        class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
+        class="converter container d-none d-flex flex-column justify-content-center align-items-center min-vh-100">
 
         <!-- Single Number -->
-        <div class="card shadow-sm conv-card">
+        <div class="card shadow-sm conv-card mb-4" style="max-width: 500px; width: 100%;">
             <div class="card-body">
-                <h3>🔢 Next Number Finder</h3>
+                <h3 class="h4 text-center mb-4"> ➡️ Next Number Finder</h3>
                 <p>Enter a number (integer or float):</p>
                 <input type="text" id="numberInput" class="form-control mb-2" placeholder="Enter a number">
                 <button class="btn btn-primary w-100" onclick="findNextNumber()">Find Next</button>
-                <div id="nextNumberResult" class="result mt-3 text-center fw-semibold">
-                </div>
+                <div id="nextNumberResult" class="result mt-3 text-center fw-semibold"></div>
                 <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
             </div>
         </div>
 
-        <!-- Array-->
-        <div class="card shadow-sm conv-card">
+        <!-- Array -->
+        <div class="card shadow-sm conv-card" style="max-width: 500px; width: 100%;">
             <div class="card-body">
-                <h3>🔢 Next Number in Array Finder</h3>
+                <h3 class="h4 text-center mb-4">➡️ Next Number in Array Finder</h3>
                 <label>Enter numbers (comma separated):</label>
                 <input type="text" id="arrayInput" class="form-control mb-2" placeholder="e.g. 2, 5, 7, 10">
 
@@ -191,6 +211,43 @@
             </div>
         </div>
     </section>
+    <!-- First & Last Element Finder -->
+    <section id="firstLastArray"
+        class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-sm conv-card">
+            <div class="card-body">
+                <h3 class="h4 text-center mb-4">🔗 First & Last Element Finder</h3>
+                <p>Click below to generate a random array:</p>
+                <button class="btn btn-primary w-100" onclick="generateArray()">Generate Array</button>
+                <div id="generatedArray" class="result mt-3 text-center fw-semibold"></div>
+
+                <button class="btn btn-primary w-100 mt-3" onclick="pickFirstLast()">Pick First & Last</button>
+                <div id="firstLastResult" class="result mt-3 text-center fw-semibold"></div>
+
+                <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+            </div>
+        </div>
+    </section>
+    <!-- addition -->
+    <section id="additionTask"
+        class="converter container d-none d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-sm conv-card">
+            <div class="card-body">
+                <h3 class="h4 text-center mb-4">➕ Add Two Numbers</h3>
+                <p>Enter numbers in the first two boxes. The result will appear in the third box.</p>
+
+                <input type="number" id="num1" class="form-control mb-3" placeholder="Enter first number">
+                <input type="number" id="num2" class="form-control mb-3" placeholder="Enter second number">
+                <input type="text" id="resultBox" class="form-control mb-3" placeholder="Result" readonly>
+
+                <button class="btn btn-outline-secondary w-100 mt-4" onclick="goHome()">← Back to Home</button>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+
 
 
 

@@ -5,10 +5,22 @@ body {
   font-family: "Poppins", system-ui, -apple-system, Arial, sans-serif;
   color: #223;
 }
+.main{
+    background-image: url(back.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
 .main-heading{
-    font-size: 4rem;
+    font-size: 7rem;
     font-weight: bold;
-    color: #4c78af;
+    color: #132133;
+}
+.main-heading strong{
+    font-size: 10rem;
+    font-weight: bold;
+    color: #74a4df;
 }
 .para{
     font-size: 1.5rem;
@@ -39,9 +51,21 @@ body {
   border-radius: 18px;
   background: #ffffffcc;
 }
-
+.card-title{
+    color: #5790d6;
+}
+.card-text{
+    color: #9aa2ac;
+}
+.h4{
+    color: #6a96cc;
+    font-size: 2rem;
+}
+.form-label{
+   color: #606569;
+}
 .result {
-  color: #2b3f5c;
+  color: #1e4a8b;
 }
 .btn-primary {
   background-color: #7faee6;
@@ -55,6 +79,6 @@ body {
 .btn-outline-secondary {
   --bs-btn-color: #566270;
   --bs-btn-border-color: #9db2c6;
-  --bs-btn-hover-bg: #e7edf5;
+  --bs-btn-hover-bg: #092549;
   --bs-btn-hover-border-color: #9db2c6;
 }

@@ -34,7 +34,7 @@ function convertHours() {
     out.textContent = "Please enter a valid number of hours.";
     return;
   }
-  const seconds = val * 3600;
+  const seconds = val * 60;
   out.textContent = `${val} hour(s) = ${seconds} second(s).`;
 }
 
@@ -73,8 +73,8 @@ function calculateBMI() {
   const bmi = w / (h * h);
   let cat = "";
   if (bmi < 18.5) cat = "Underweight";
-  else if (bmi < 24.9) cat = "Normal weight";
-  else if (bmi < 29.9) cat = "Overweight";
+  else if (bmi <= 24.9) cat = "Normal weight";
+  else if (bmi <= 29.9) cat = "Overweight";
   else cat = "Obese";
 
   out.textContent = `BMI: ${bmi.toFixed(2)} (${cat})`;
@@ -124,3 +124,51 @@ function findNextInArray() {
       `Number ${target} not found in the array.`;
   }
 }
+
+
+let randomArray = [];
+
+// Generate random array
+function generateArray() {
+  randomArray = [];
+  let size = Math.floor(Math.random() * 6) + 5;
+  for (let i = 0; i < size; i++) {
+    randomArray.push(Math.floor(Math.random() * 100));
+  }
+  document.getElementById("generatedArray").innerText = 
+    `Generated Array: [${randomArray.join(", ")}]`;
+  document.getElementById("firstLastResult").innerText = "";
+}
+function pickFirstLast() {
+  if (randomArray.length === 0) {
+    document.getElementById("firstLastResult").innerText = "Please generate an array first!";
+    return;
+  }
+  let first = randomArray[0];
+  let last = randomArray[randomArray.length - 1];
+  document.getElementById("firstLastResult").innerText = 
+    `First: ${first}, Last: ${last}`;
+}
+
+// addition
+document.getElementById("num1").addEventListener("input", calculateSum);
+document.getElementById("num2").addEventListener("input", calculateSum);
+
+function calculateSum() {
+  let val1 = document.getElementById("num1").value;
+  let val2 = document.getElementById("num2").value;
+  let resultBox = document.getElementById("resultBox");
+
+  if (val1 === "") {
+    resultBox.value = "NaN";
+    return;
+  }
+
+  if (val2 === "") {
+    resultBox.value = "NaN";
+    return;
+  }
+
+  resultBox.value = parseInt(val1) + parseInt(val2);
+}
+
