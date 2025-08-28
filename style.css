@@ -1,0 +1,60 @@
+
+body {
+  background: linear-gradient(135deg, #a8c6f0, #d9dde2);
+  min-height: 100vh;
+  font-family: "Poppins", system-ui, -apple-system, Arial, sans-serif;
+  color: #223;
+}
+.main-heading{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #4c78af;
+}
+.para{
+    font-size: 1.5rem;
+    color: #3a66a8;
+}
+.card-click {
+  border: 1px solid #c9d6e7;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #eef5ff, #ffffff);
+  box-shadow: 0 10px 20px rgba(56, 87, 138, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card-click:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(56, 87, 138, 0.18);
+}
+
+.icon-emoji {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.conv-card {
+  width: 100%;
+  max-width: 560px;
+  border: 1px solid #c9d6e7;
+  border-radius: 18px;
+  background: #ffffffcc;
+}
+
+.result {
+  color: #2b3f5c;
+}
+.btn-primary {
+  background-color: #7faee6;
+  border-color: #7faee6;
+  --bs-btn-hover-bg: #6a96cc;
+  --bs-btn-hover-border-color: #6a96cc;
+  --bs-btn-active-bg: #5d88bc;
+  --bs-btn-active-border-color: #5d88bc;
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: #566270;
+  --bs-btn-border-color: #9db2c6;
+  --bs-btn-hover-bg: #e7edf5;
+  --bs-btn-hover-border-color: #9db2c6;
+}
